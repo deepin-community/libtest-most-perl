@@ -1,0 +1,52 @@
+Source: libtest-most-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Damyan Ivanov <dmn@debian.org>,
+           Ansgar Burchardt <ansgar@debian.org>,
+           Florian Schlichting <fsfs@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 12)
+Build-Depends-Indep: libexception-class-perl <!nocheck>,
+                     libtest-deep-perl (>= 0.119) <!nocheck>,
+                     libtest-differences-perl (>= 0.64) <!nocheck>,
+                     libtest-exception-perl (>= 0.43) <!nocheck>,
+                     libtest-harness-perl (>= 3.35) <!nocheck>,
+                     libtest-simple-perl (>= 1.302047) <!nocheck>,
+                     libtest-warn-perl <!nocheck>,
+                     perl
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libtest-most-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libtest-most-perl.git
+Homepage: https://metacpan.org/release/Test-Most
+Rules-Requires-Root: no
+
+Package: libtest-most-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libexception-class-perl,
+         libtest-deep-perl (>= 0.119),
+         libtest-differences-perl (>= 0.64),
+         libtest-exception-perl (>= 0.43),
+         libtest-harness-perl (>= 3.35),
+         libtest-simple-perl (>= 1.302047),
+         libtest-warn-perl
+Description: Perl module with the most commonly needed test functions and features
+ Test::Most provides the most commonly used testing functions and gives
+ a bit more fine-grained control over your test suite.
+ .
+ All functions from the following modules will automatically be
+ exported:
+ .
+  * Test::More
+  * Test::Exception
+  * Test::Differences
+  * Test::Deep
+  * Test::Warn
+ .
+ This is useful when one is used to most of the above modules but
+ wouldn't want to bother to load them all explicitly.
+ .
+ Test::Most also provides a couple of routines to control tests
+ behaviour in case of errors.

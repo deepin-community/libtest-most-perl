@@ -1,0 +1,158 @@
+libtest-most-perl (0.37-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+
+  [ gregor herrmann ]
+  * debian/watch: use uscan version 4.
+  * Import upstream version 0.37.
+  * Declare compliance with Debian Policy 4.5.0.
+  * Set Rules-Requires-Root: no.
+  * Drop unneeded version constraints from (build) dependencies.
+  * Annotate test-only build dependencies with <!nocheck>.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 05 Apr 2020 01:16:05 +0200
+
+libtest-most-perl (0.35-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * Add debian/upstream/metadata and remove upstream git repo URL from
+    debian/copyright.
+  * Import upstream version 0.35
+  * Update (build) dependencies.
+  * Mark package as autopkgtest-able.
+  * Bump debhelper compatibility level to 9.
+  * Declare compliance with Debian Policy 3.9.8.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 04 Sep 2016 18:05:38 +0200
+
+libtest-most-perl (0.34-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Strip trailing slash from metacpan URLs.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 03 Aug 2014 15:12:15 +0200
+
+libtest-most-perl (0.33-1) unstable; urgency=low
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Florian Schlichting ]
+  * Import Upstream version 0.33
+  * Add upstream-repo URL to Source field
+  * Email change: Florian Schlichting -> fsfs@debian.org
+  * Add myself to d/copyright
+  * Drop build-dependency on Module::Build, obsoleted by switch to Makefile.PL
+  * Declare compliance with Debian Policy 3.9.5
+
+ -- Florian Schlichting <fsfs@debian.org>  Sun, 12 Jan 2014 22:19:41 +0100
+
+libtest-most-perl (0.31-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/control: update {versioned,alternative} (build) dependencies.
+
+  [ Florian Schlichting ]
+  * Imported Upstream version 0.31.
+  * Bumped Standards-Version to 3.9.4 (no change).
+  * Bumped build-dependency on Module::Build to 0.4.
+  * Added myself to Uploaders.
+
+ -- Florian Schlichting <fschlich@zedat.fu-berlin.de>  Thu, 04 Oct 2012 22:47:26 +0200
+
+libtest-most-perl (0.25-1) unstable; urgency=low
+
+  * Team upload
+
+  [ Ansgar Burchardt ]
+  * Email change: Ansgar Burchardt -> ansgar@debian.org
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Maximilian Gass ]
+  * New upstream release 0.24
+  * Update versions on dependencies
+
+  [ Fabrizio Regalli ]
+  * New upstream release 0.25
+
+  [ Salvatore Bonaccorso ]
+  * Email change: Salvatore Bonaccorso -> carnil@debian.org
+  * Update (build-)dependencies in debian/control file.
+    Update Build-Depends-Indep on libmodule-build-perl to be an alternative
+    build dependency with perl (>= 5.11.3).
+    Add alternative (Build-)Depends(-Indep) on libtest-harness-perl with
+    perl (>= 5.13.3).
+    Make versioned (Build-)Depends(-Indep) on libtest-deep-perl unversioned
+    as the required dependency is satisfied already in squeeze.
+    Drop alternative (Build-)Depends(-Indep) for Test::Simple 0.88, which is
+    already present in squeeze.
+  * Update copyright file information.
+    Update format to copyright-format 1.0 as released together with Debian
+    policy 3.9.3.
+    Update copyright years for debian/* packaging.
+  * Bump Standards-Version to 3.9.3
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 27 May 2012 09:18:19 +0200
+
+libtest-most-perl (0.23-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release
+  * debian/copyright: Refer to Debian systems instead of Debian
+    GNU/Linux systems.
+  * debian/watch: Remove comments from watch file.
+
+ -- Salvatore Bonaccorso <salvatore.bonaccorso@gmail.com>  Mon, 13 Sep 2010 22:26:47 +0200
+
+libtest-most-perl (0.22-1) unstable; urgency=low
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Changed: Replace versioned (build-)dependency on
+    perl (>= 5.6.0-{12,16}) with an unversioned dependency on perl (as
+    permitted by Debian Policy 3.8.3).
+
+  [ gregor herrmann ]
+  * Add perl (>= 5.10.1) as an alternative (build) dependency for Test::Simple
+    and Test::Harness.
+
+  [ Ansgar Burchardt ]
+  * New upstream release.
+  * Use tiny rules with debhelper 8.
+  * Remove build-dep on libmodule-build-perl (included in perl since 5.10).
+  * Make (build-)dep on libexception-class-perl, libtest-warn-perl unversioned
+    as the requirement is already satisfied in stable.
+  * Bump (build-)dep on libtest-deep-perl to >= 0.106.
+  * Bump (build-)dep on libtest-differences-perl to >= 0.50.
+  * Bump (build-)dep on libtest-exception-perl to >= 0.29.
+  * Bump (build-)dep on libtest-simple-perl to >= 0.88.
+  * debian/copyright: Formatting changes for current DEP-5 proposal; refer to
+    /usr/share/common-licenses/GPL-1.
+  * Bump Standards-Version to 3.9.1.
+  * Add myself to Uploaders.
+
+ -- Ansgar Burchardt <ansgar@43-1.org>  Mon, 09 Aug 2010 18:31:05 +0900
+
+libtest-most-perl (0.21-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #522006 -- ITP)
+
+ -- Damyan Ivanov <dmn@debian.org>  Tue, 31 Mar 2009 17:35:36 +0300
